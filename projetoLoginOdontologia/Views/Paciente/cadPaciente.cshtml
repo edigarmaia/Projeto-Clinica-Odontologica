@@ -1,0 +1,39 @@
+﻿@model projetoLoginOdontologia.Models.modelPaciente
+
+
+@{
+    ViewBag.Title = "Cadastro de Paciente";
+
+}
+
+
+@using (Html.BeginForm("cadPaciente", "Paciente", FormMethod.Post))
+{
+    <label>Cadastro de Paciente</label>
+    <br />
+    <div class="editor-label">
+        @Html.LabelFor(m => m.CodPac)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(m => m.CodPac)
+    </div>
+
+    <div class="editor-label">
+        @Html.LabelFor(m => m.NomePac)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(m => m.NomePac)
+    </div>
+
+    <div class="editor-label">
+        @Html.LabelFor(m => m.Telpac)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(m => m.Telpac)
+    </div>
+    <br />
+    <input type="submit" value="Cadastrar" />
+}
+<br /><br />
+
+@ViewBag.confCadastro

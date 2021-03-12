@@ -23,7 +23,12 @@
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Início", "Index", "Home")</li>
                     <li>@Html.ActionLink("Sobre", "About", "Home")</li>
+
+                    @*escondendo o menu contato para o usuario tipo 1*@
+                    @if (Session["tipologado2"]!=null){ 
                     <li>@Html.ActionLink("Contato", "Contact", "Home")</li>
+                    }
+
                     <li>@Html.ActionLink("Logout", "Logout", "Home")</li>
                 </ul>
             </div>

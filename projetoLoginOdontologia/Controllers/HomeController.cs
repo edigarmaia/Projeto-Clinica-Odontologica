@@ -48,7 +48,9 @@ namespace projetoLoginOdontologia.Controllers
 
             else
             {
+
                 ViewBag.msgLogar = "Usuário não encontrado. Verifique o nome do usuário e a senha";
+                Response.Write("<script>alert('Erro no Login')</script>");
                 return View();
 
             }
@@ -59,7 +61,8 @@ namespace projetoLoginOdontologia.Controllers
 
             if((Session["usuarioLogado"] == null) || (Session["senhaLogado"] == null))
             {
-                ViewBag.msgLogar = "Acesso negado";
+                TempData["Message"] = "Acesso Negado. Utilize um login e senha válidos";
+
                 return RedirectToAction("Index", "Home");
             }
             else
@@ -75,7 +78,8 @@ namespace projetoLoginOdontologia.Controllers
         {
             if ((Session["usuarioLogado"] == null) || (Session["senhaLogado"] == null))
             {
-                ViewBag.msgLogar = "Acesso negado";
+                TempData["Message"] = "Acesso Negado. Utilize um login e senha válidos";
+
                 return RedirectToAction("Index", "Home");
             }
             else
@@ -99,7 +103,8 @@ namespace projetoLoginOdontologia.Controllers
             Session["usuarioLogado"] = null;
             Session["senhaLogado"] = null;
             Session["tipoLogado1"] = null;
-            Session["tipoLogado2"] = null;
+            Session["tipoLogado2"] = null; TempData["Message"] = "Logout realizado com sucesso!";
+
             return RedirectToAction("Index", "Home");
         }
 

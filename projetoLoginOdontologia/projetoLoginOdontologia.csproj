@@ -121,13 +121,19 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\DentistaController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\PacienteController.cs" />
+    <Compile Include="Dados\acoesDentista.cs" />
     <Compile Include="Dados\acoesLogin.cs" />
+    <Compile Include="Dados\acoesPaciente.cs" />
     <Compile Include="Dados\conexao.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\modelDentista.cs" />
     <Compile Include="Models\modelLogin.cs" />
+    <Compile Include="Models\modelPaciente.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -168,6 +174,16 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\Logout.cshtml" />
     <Content Include="Views\Home\semAcesso.cshtml" />
+    <Content Include="Views\Paciente\cadPaciente.cshtml" />
+    <Content Include="Views\Dentista\cadDentista.cshtml" />
+    <Content Include="Views\Paciente\AtualizaPaciente.cshtml" />
+    <Content Include="Views\Paciente\buscaPaciente.cshtml" />
+    <Content Include="Views\Paciente\consPaciente.cshtml" />
+    <Content Include="Views\Paciente\excluirPaciente.cshtml" />
+    <Content Include="Views\Paciente\selecionaPaciente.cshtml" />
+    <Content Include="Views\Paciente\confAtualizaPaciente.cshtml" />
+    <Content Include="Views\Paciente\confExcluirPaciente.cshtml" />
+    <Content Include="Views\Paciente\selecionaPacienteExcluir.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

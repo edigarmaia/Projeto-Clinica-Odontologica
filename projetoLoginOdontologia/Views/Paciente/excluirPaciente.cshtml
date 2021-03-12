@@ -1,0 +1,19 @@
+﻿@model projetoLoginOdontologia.Models.modelPaciente
+@{
+    ViewBag.Title = "confExcluirPaciente";
+}
+
+<h2>Deseja excluir o paciente abaixo?</h2>
+
+@using (Html.BeginForm("confExcluirPaciente", "Paciente", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @ViewBag.codigo <br />
+    @ViewBag.nome <br />
+    @ViewBag.tel <br /><br />
+
+    <input type="submit" value="Excluir" />
+}
+<br /><br />
+
+
+@ViewBag.msg

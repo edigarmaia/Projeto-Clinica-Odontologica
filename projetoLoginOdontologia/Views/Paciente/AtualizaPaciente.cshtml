@@ -1,0 +1,33 @@
+﻿@model projetoLoginOdontologia.Models.modelPaciente
+@{
+    ViewBag.Title = "AtualizaPaciente";
+}
+
+<h2>Atualizar Paciente</h2>
+
+@using (Html.BeginForm("confAtualizaPaciente", "Paciente", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <label>Paciente</label>
+    <br />
+    <div class="editor-label">
+        @Html.LabelFor(m => m.NomePac)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(m => m.NomePac, new { htmlAttributes = new { @Value = ViewBag.nome } })
+    </div>
+
+    <div class="editor-label">
+        @Html.LabelFor(m => m.Telpac)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(m => m.Telpac, new { htmlAttributes = new { @Value = ViewBag.tel } })
+    </div>
+    <br />
+    <input type="submit" value="Atualizar" />
+}
+<br /><br />
+
+
+@ViewBag.msg
+
+

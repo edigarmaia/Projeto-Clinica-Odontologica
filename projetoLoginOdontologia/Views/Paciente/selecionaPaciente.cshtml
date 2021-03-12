@@ -1,0 +1,24 @@
+﻿@model projetoLoginOdontologia.Models.modelPaciente
+@{
+    ViewBag.Title = "selecionaPaciente";
+}
+
+<h2>Alteração Paciente</h2>
+
+@Html.Raw(ViewBag.GridViewString)
+
+
+@using (Html.BeginForm("AtualizaPaciente", "Paciente", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <label>Paciente</label>
+    <br />
+    <div class="editor-label">
+        Digite o código do paciente a ser alterado:
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(m => m.CodPac)
+    </div>
+
+    <br />
+    <input type="submit" value="Selecionar" />
+}
