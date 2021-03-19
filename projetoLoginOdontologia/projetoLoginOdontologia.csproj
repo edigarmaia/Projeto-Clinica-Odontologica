@@ -121,9 +121,11 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AtendController.cs" />
     <Compile Include="Controllers\DentistaController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PacienteController.cs" />
+    <Compile Include="Dados\acoesAtendimento.cs" />
     <Compile Include="Dados\acoesDentista.cs" />
     <Compile Include="Dados\acoesLogin.cs" />
     <Compile Include="Dados\acoesPaciente.cs" />
@@ -131,6 +133,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\modelAtendimento.cs" />
     <Compile Include="Models\modelDentista.cs" />
     <Compile Include="Models\modelLogin.cs" />
     <Compile Include="Models\modelPaciente.cs" />
@@ -184,9 +187,19 @@
     <Content Include="Views\Paciente\confAtualizaPaciente.cshtml" />
     <Content Include="Views\Paciente\confExcluirPaciente.cshtml" />
     <Content Include="Views\Paciente\selecionaPacienteExcluir.cshtml" />
+    <Content Include="Views\Dentista\consDentista.cshtml" />
+    <Content Include="Views\Dentista\buscaDentista.cshtml" />
+    <Content Include="Views\Dentista\selecionaDentistaExcluir.cshtml" />
+    <Content Include="Views\Dentista\excluirDentista.cshtml" />
+    <Content Include="Views\Dentista\confExcluirDentista.cshtml" />
+    <Content Include="Views\Dentista\selecionaDentista.cshtml" />
+    <Content Include="Views\Dentista\AtualizaDentista.cshtml" />
+    <Content Include="Views\Dentista\confAtualizaDentista.cshtml" />
+    <Content Include="Views\Atend\cadAtendimento.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Atendimento\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

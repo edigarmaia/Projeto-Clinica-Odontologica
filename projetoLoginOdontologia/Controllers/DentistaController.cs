@@ -18,7 +18,7 @@ namespace projetoLoginOdontologia.Controllers
         {
             return View();
         }
-
+        //cadastrando o dentista
         acoesDentista acDent = new acoesDentista();
 
 
@@ -36,7 +36,7 @@ namespace projetoLoginOdontologia.Controllers
             ViewBag.confCadastro = "Cadastro Realizado com sucesso";
             return View();
         }
-
+        //consultando o dentista
         public ActionResult consDentista()
         {
             GridView dgv = new GridView(); // Instância para a tabela
@@ -67,7 +67,7 @@ namespace projetoLoginOdontologia.Controllers
             return View();
         }
 
-        
+        //atualizando o dentista
             public ActionResult selecionaDentista()
         {
             GridView dgv = new GridView(); // Instância para a tabela
@@ -80,8 +80,6 @@ namespace projetoLoginOdontologia.Controllers
             return View();
         }
 
-
-
         public static string cod;
 
         public ActionResult AtualizaDentista(modelDentista dent)
@@ -90,6 +88,7 @@ namespace projetoLoginOdontologia.Controllers
             cod = dent.CodDentista;
             ViewBag.nome = dent.NomeDentista;
             ViewBag.tel = dent.TelDentista;
+            ViewBag.email = dent.EmailDentista;
             return View();
         }
 
@@ -101,7 +100,7 @@ namespace projetoLoginOdontologia.Controllers
             return View();
         }
 
-
+        //excluindo o dentista
         public ActionResult selecionaDentistaExcluir()
         {
             GridView dgv = new GridView(); // Instância para a tabela
@@ -122,9 +121,9 @@ namespace projetoLoginOdontologia.Controllers
             ViewBag.codigo = cod;
             ViewBag.nome = dent.NomeDentista;
             ViewBag.tel = dent.TelDentista;
+            ViewBag.email = dent.EmailDentista;
             return View();
         }
-
 
         [HttpPost]
         public ActionResult confExcluirDentista(modelDentista dent)

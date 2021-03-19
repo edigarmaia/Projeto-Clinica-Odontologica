@@ -18,7 +18,7 @@ namespace projetoLoginOdontologia.Controllers
         {
             return View();
         }
-
+        //cadastrando o paciente
         acoesPaciente acPac = new acoesPaciente();
 
 
@@ -36,9 +36,7 @@ namespace projetoLoginOdontologia.Controllers
             ViewBag.confCadastro = "Cadastro Realizado com sucesso";
             return View();
         }
-
-
-
+        //consultando o paciente
         public ActionResult consPaciente()
         {
             GridView dgv = new GridView(); // Instância para a tabela
@@ -50,9 +48,6 @@ namespace projetoLoginOdontologia.Controllers
             ViewBag.GridViewString = sw.ToString(); //Comando para construção do Grid na tela
             return View();
         }
-
-
-
 
         public ActionResult buscaPaciente()
         {
@@ -71,8 +66,7 @@ namespace projetoLoginOdontologia.Controllers
             ViewBag.GridViewString = sw.ToString(); //Comando para construção do Grid na tela
             return View();
         }
-
-
+        //atualizando o paciente
         public ActionResult selecionaPaciente()
         {
             GridView dgv = new GridView(); // Instância para a tabela
@@ -84,9 +78,6 @@ namespace projetoLoginOdontologia.Controllers
             ViewBag.GridViewString = sw.ToString(); //Comando para construção do Grid na tela
             return View();
         }
-
-
-
 
         public static string cod;
 
@@ -107,8 +98,7 @@ namespace projetoLoginOdontologia.Controllers
             return View();
         }
 
-
-
+        //excluindo o paciente
         public ActionResult selecionaPacienteExcluir()
         {
             GridView dgv = new GridView(); // Instância para a tabela
@@ -121,11 +111,6 @@ namespace projetoLoginOdontologia.Controllers
             return View();
         }
 
-
-
-
-
-
         public ActionResult excluirPaciente(modelPaciente pac)
         {
             acPac.consultaBuscaPaciente(pac);
@@ -135,8 +120,6 @@ namespace projetoLoginOdontologia.Controllers
             ViewBag.tel = pac.Telpac;
             return View();
         }
-
-
 
         [HttpPost]
         public ActionResult confExcluirPaciente(modelPaciente pac)

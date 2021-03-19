@@ -1,0 +1,25 @@
+﻿@model projetoLoginOdontologia.Models.modelDentista
+@{
+    ViewBag.Title = "selecionaDentistaExcluir";
+}
+
+<h2>Exclusão do Dentista</h2>
+
+@Html.Raw(ViewBag.GridViewString)
+
+
+@using (Html.BeginForm("excluirDentista", "Dentista", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <label>Dentista</label>
+    <br />
+    <div class="editor-label">
+        Digite o código do dentista a ser excluído:
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(m => m.CodDentista)
+    </div>
+
+    <br />
+    <input type="submit" value="Selecionar" />
+}
+

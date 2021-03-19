@@ -3,7 +3,7 @@
     ViewBag.Title = "selecionaPacienteExcluir";
 }
 
-<h2>Alteração Paciente</h2>
+<h2>Exclusão do Paciente</h2>
 
 @Html.Raw(ViewBag.GridViewString)
 
@@ -13,7 +13,7 @@
     <label>Paciente</label>
     <br />
     <div class="editor-label">
-        Digite o código da agenda a ser alterada:
+        Digite o código do paciente a ser excluído:
     </div>
     <div class="editor-field">
         @Html.EditorFor(m => m.CodPac)

@@ -47,7 +47,7 @@ namespace projetoLoginOdontologia.Dados
         }
 
 
-
+        
         MySqlDataReader dr;
         public void consultaBuscaDentista(modelDentista dent)
         {
@@ -88,8 +88,6 @@ namespace projetoLoginOdontologia.Dados
             cmd.ExecuteNonQuery();
             con.MyDesconectarBD();
         }
-
-
 
 
 

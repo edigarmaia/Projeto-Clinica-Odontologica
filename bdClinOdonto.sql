@@ -21,12 +21,14 @@ EmailDentista varchar(50)
 );
 
 create table tbAtendimento(
-codAtendimento int primary key,
-dataAtend varchar(8),
-horaAtend varchar(8),
+codAtendimento int primary key auto_increment,
+dataAtend varchar(20),
+horaAtend varchar(20),
 codDentista int references tbDentista(codDentista),
 codPac int references tbPaciente(codPac)
 );
+
+drop table tbatendimento;
 -- delete from table tbatendimento where codPac = null;
 
 insert into tblogin (usuario, senha, tipo) values ('edigar','edigar',1);
@@ -44,5 +46,6 @@ insert into tbDentista (codDentista, NomeDentista, TelDentista, EmailDentista) v
 select * from tblogin;
 select * from tbPaciente;
 select * from tbdentista;
+select * from tbatendimento;
 
 

@@ -23,7 +23,7 @@ namespace projetoLoginOdontologia.Dados
             cmd.ExecuteNonQuery();
             con.MyDesconectarBD();
         }
-
+        // método que faz a seleção dos dados no banco
         public DataTable consultaPaciente()
         {
             MySqlCommand cmd = new MySqlCommand("select * from tbPaciente", con.MyConectarBD());
@@ -68,10 +68,6 @@ namespace projetoLoginOdontologia.Dados
             con.MyDesconectarBD();
         }
 
-
-
-
-
         public void atualizarPaciente(modelPaciente pac)
         {
 
@@ -84,10 +80,6 @@ namespace projetoLoginOdontologia.Dados
             cmd.ExecuteNonQuery();
             con.MyDesconectarBD();
         }
-
-
-
-
 
         public void excluirPaciente(modelPaciente pac)
         {

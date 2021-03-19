@@ -1,0 +1,45 @@
+﻿@model projetoLoginOdontologia.Models.modelDentista
+@{
+    /**/
+
+    ViewBag.Title = "AtualizaDentista";
+}
+
+<h2>Atualiza Dentista</h2>
+
+@using (Html.BeginForm("confAtualizaDentista", "Dentista", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @* <label>Dentista</label>*@
+    <br />
+    <div class="editor-label">
+        @Html.LabelFor(m => m.NomeDentista)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(m => m.NomeDentista, new { htmlAttributes = new { @Value = ViewBag.nome } })
+    </div>
+
+    <div class="editor-label">
+        @Html.LabelFor(m => m.TelDentista)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(m => m.TelDentista, new { htmlAttributes = new { @Value = ViewBag.tel } })
+    </div>
+    <br />
+
+    <div class="editor-label">
+        @Html.LabelFor(m => m.EmailDentista)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(m => m.EmailDentista, new { htmlAttributes = new { @Value = ViewBag.email } })
+    </div>
+    <br />
+
+
+    <input type="submit" value="Atualizar" />
+}
+<br /><br />
+
+
+@ViewBag.msg
+
+
